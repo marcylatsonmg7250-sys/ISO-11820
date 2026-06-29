@@ -113,7 +113,7 @@
   TF1 = 750 + 随机噪声                            // 直接钳位到目标温度
   TF2 = 750 + 随机噪声
   稳定计数器 ++，当计数器 > 3 时 IsStable = true（每 800ms 一次，约 3.2 秒）
-  CheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 Ready
+  CheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 ReadyCheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 Ready
 
 记录阶段（Recording）：
   surfaceTarget = min(TF1 × 0.95, 800)
@@ -126,7 +126,7 @@
   TF1 -= 0.5 + 随机噪声 × 0.1                    // 缓慢冷却
   TF2 -= 0.5 + 随机噪声 × 0.1
 
-随机噪声 = Random(-1, 1) × TempFluctuation       // TempFluctuation 默认 0.5°C
+随机噪声 = Random(-1, 1) × TempFluctuation       // TempFluctuation 默认 0.5°C随机噪声 = Random(-1, 1) × TempFluctuation       // TempFluctuation 默认 0.5°C
 ```
 
 ### 2.4 试验状态机
@@ -578,21 +578,21 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 │                  Core 核心层                          │
 │  ┌──────────────────────────────────┐                │
 │  │       TestMaster 状态机           │                │
-│  │  Idle → Preparing → Ready        │                │
-│  │       → Recording → Complete     │                │
+│  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 ││  │  Idle → Preparing → Ready        │                │││无所事事→ Preparing →准备│                 │
+│  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 ││  │       → Recording → Complete     │                │││→记录完整│→                 │││→记录完整│→                 │││→记录完整│&rarr ;                 │
 │  └──────────────────────────────────┘                │
 ├─────────────────────────────────────────────────────┤
 │                Services 服务层                        │
 │  ┌──────────┐ ┌──────────┐ ┌──────────┐             │
 │  │仿真引擎   │ │数据采集   │ │导出服务   │             │
-│  │Simulator │ │DaqWorker │ │Export    │             │
+│  │Simulator │ │DaqWorker │ │Export    │             │││模拟器││DaqWorker││出口││
 │  │(5通道温度)│ │(800ms定时)│ │(CSV/Excel│             │
-│  │          │ │          │ │ /PDF)    │             │
+│  │          │ │          │ │ /PDF)    │             │││           ││           ││/ . PDF)│              │││           ││           ││/ . PDF)│              │││            ││            ││/。PDF)│               │││           ││           ││/ . PDF)│              │││            ││            ││/。PDF)│               │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││           ││           ││/ . PDF)│              │││            ││            ││/。PDF)│               │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││           ││           ││/ . PDF)│              │││            ││            ││/。PDF)│               │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││           ││           ││/ . PDF)│              │││            ││            ││/。PDF)│               │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││           ││           ││/ . PDF)│              │││            ││            ││/。PDF)│               │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││            ││            ││/。PDF)│               │││             ││             ││/。PDF)│                │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││               ││               ││/。PDF)│                  │││                ││                ││/。PDF)│                   │││             ││             ││/。PDF)│                │││              ││              ││/。PDF)│                 │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││              ││              ││/。PDF)│                 │││               ││               ││/。PDF)│                  │││               ││               ││/。PDF)│                  │││                ││                ││/。PDF)│                   │
 │  └──────────┘ └──────────┘ └──────────┘             │
 ├─────────────────────────────────────────────────────┤
 │                 Data 数据层                           │
 │  ┌──────────────────────────────────┐                │
-│  │     DbHelper (SQLite 直接SQL)     │                │
+│  │     DbHelper (SQLite 直接SQL)     │                │││DbHelper (SQLite直接│SQL)                 │
 │  │  6张表 + CSV温度时序文件          │                │
 │  └──────────────────────────────────┘                │
 └─────────────────────────────────────────────────────┘
@@ -613,7 +613,7 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 | ⑨ | **历史查询** | 日期/样品/操作员三维筛选，双击查看详情 |
 | ⑩ | **设备校准** | 校准温度实时显示 + 历史记录管理 |
 
-### 8.5 状态机流转图（PPT关键页）
+### 8.5 状态机流转图
 
 ```
                 ┌──────────┐
@@ -658,9 +658,9 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 │              仿真温度生成（每800ms）                │
 ├──────────────────────────────────────────────────┤
 │  升温阶段（TF1 < 747°C）：                         │
-│    TF1 += 40°C/s × 0.8s + 随机噪声(±0.5°C)       │
+│    TF1 += 40°C/s × 0.8s + 随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       ││    TF1  = 40°C/s × 0.8s   随机噪声(±0.5°C)       │
 │    TF2 同上，独立噪声                              │
-│    TS ≈ TF1 × 0.3，TC ≈ TF1 × 0.25               │
+│    TS ≈ TF1 × 0.3，TC ≈ TF1 × 0.25               ││TS ≈ TF1 × 0.3,TC ≈ TF1 × 0.25││TS ≈ TF1 × 0.3,TC ≈ TF1 × 0.25││TS ≈ TF1 × 0.3,TC ≈ TF1 × 0.25TF1 0.3,TC TF1 0.25│TF1 0.3,TC TF1 0.25│TF1 0.3,TC TF1 0.25│TF1 0.3,TC TF1 0.25│TF1 0.3,TC TF1 0.25│
 ├──────────────────────────────────────────────────┤
 │  稳定阶段（TF1 ≥ 747°C）：                         │
 │    TF1 = 750°C + 随机噪声（直接钳位）              │
@@ -681,31 +681,31 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 
 ```
 ┌──────────────┐     ┌──────────────────┐     ┌──────────────┐
-│  operators   │     │   testmaster     │     │productmaster │
+│  operators   │     │   testmaster     │     │productmaster ││操作人员│testmaster│productmaster
 ├──────────────┤     ├──────────────────┤     ├──────────────┤
-│ userid       │     │ productid (PK/FK)│────→│ productid(PK)│
-│ username     │     │ testid (PK)      │     │ productname  │
-│ pwd          │     │ testdate         │     │ specific     │
-│ usertype     │     │ operator ────────┼──┐  │ diameter     │
-└──────────────┘     │ preweight        │  │  │ height       │
-                     │ postweight       │  │  └──────────────┘
+│ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)││ userid       │     │ productid (PK/FK)│────→│ productid(PK)│
+│ username     │     │ testid (PK)      │     │ productname  ││username││tested （PK）││productname││username││tested （PK）││username││tested （PK）││productname││username││测试（PK）││productname││username││测试（PK）││username││测试（PK）││username││测试（PK）││productname│
+│ pwd          │     │ testdate         │     │ specific     ││pwd           ││testdate││具体││PWD│testdate│具体的│PWD│testdate│
+│ usertype     │     │ operator ────────┼──┐  │ diameter     ││用户类型││操作人员────────────│直径│
+└──────────────┘     │ preweight        │  │  │ height       │└──────────────┘│preweight│││高度│└──────────────┘│preweight│││高度│└──────────────┘│preweight│││高度│
+                     │ postweight       │  │  └──────────────┘│postweight││││├────────────
 ┌──────────────┐     │ lostweight_per   │  │
 │  apparatus   │     │ deltatf          │  │
 ├──────────────┤     │ totaltesttime    │  │
 │ apparatusid  │     │ flametime        │  │
-│ innernumber  │     │ flameduration    │  │
+│ innernumber  │     │ flameduration    │  ││内部编号││火化││
 │ apparatusname│     │ maxtf1/maxtf2... │  │
 │ constpower   │     │ finaltf1/finaltf2│  │
-└──────────────┘     │ flag             │  │
+└──────────────┘     │ flag             │  ││││││││││││
                      └──────────────────┘  │
 ┌──────────────┐                           │
 │   sensors    │     ┌──────────────────┐  │
-├──────────────┤     │CalibrationRecords│  │
+├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]├──────────────┤     │CalibrationRecords│  │[…][…][…][…][…][…][…][…][…][…][…]
 │ sensorid     │     ├──────────────────┤  │
 │ dispname     │     │ Id               │  │
 │ outputvalue  │     │ CalibrationDate  │  │
-│ signaltype   │     │ Operator ────────┼──┘
-└──────────────┘     │ TemperatureData  │
+│ signaltype   │     │ Operator ────────┼──┘│信号型││操作人员────────├──├──
+└──────────────┘     │ TemperatureData  ││──────────│││
                      └──────────────────┘
 
 温度时序数据不入库 → 存为 CSV 文件
@@ -713,11 +713,10 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 ```
 
 ### 8.8 技术栈一览
-
 | 分类 | 技术 | 用途 |
 |------|------|------|
-| 框架 | .NET 8 + WinForms | 桌面应用 |
-| 数据库 | SQLite + Microsoft.Data.Sqlite | 本地数据存储 |
+| 框架 | .NET 8 + WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 || 框架 | .NET 8   WinForms | 桌面应用 |
+| 数据库 | SQLite + Microsoft.Data.Sqlite | 本地数据存储 || 数据库 | SQLite   Microsoft.Data.Sqlite | 本地数据存储 || 数据库 | SQLite   Microsoft.Data.Sqlite | 本地数据存储 || 数据库 | SQLite   Microsoft.Data.Sqlite | 本地数据存储 || 数据库 | SQLite   Microsoft.Data.Sqlite | 本地数据存储 || 数据库 | SQLite   Microsoft.Data.Sqlite | 本地数据存储 || 数据库 | SQLite   Microsoft.Data.Sqlite | 本地数据存储 || 数据库 | SQLite   Microsoft.Data.Sqlite | 本地数据存储 |
 | 图表 | OxyPlot 2.x | 实时温度折线图 |
 | Excel | EPPlus 7.x | 带图表的Excel报告 |
 | PDF | PDFsharp-MigraDoc 6.x | PDF报告生成 |
@@ -725,7 +724,7 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 | 日志 | Serilog 4.x | 滚动文件日志 |
 | 配置 | Microsoft.Extensions.Configuration | appsettings.json |
 
-### 8.9 项目亮点（PPT展示要点）
+### 8.9 项目亮点
 
 | 亮点 | 说明 |
 |------|------|
@@ -734,28 +733,11 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 | 📊 **实时可视化** | OxyPlot 4线实时曲线 + LED风格温度面板 |
 | 🧮 **科学计算** | 线性回归计算温漂，指数逼近模拟热传导 |
 | 📄 **多格式报告** | CSV/Excel(带图表)/PDF(含判定) 一键生成 |
-| 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 |
+| 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 || 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 || 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 || 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 || 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 || 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 || 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 || 🏗️ **分层架构** | UI→Core→Services→Data 四层分离，事件驱动通信 |
 | 🔒 **线程安全** | 后台采集 + UI Invoke，跨线程安全更新 |
 | 🎨 **暗色主题** | 专业仪器风格深色UI，彩色温度通道区分 |
 
-### 8.10 演示流程（PPT建议按此顺序）
-
-```
-第1页：封面 — 项目名称 + 学生信息
-第2页：项目背景 — 为什么做这个（无硬件、教学需求）
-第3页：技术架构图 — 四层架构一目了然
-第4页：状态机设计 — 5状态流转图
-第5页：仿真引擎 — 三阶段算法说明
-第6页：数据库设计 — ER图 + 6张表
-第7-9页：功能演示（截图）
-  7. 登录 → 主界面
-  8. 新建试验 → 升温 → 记录 → 完成
-  9. 报告导出 + 历史查询
-第10页：技术栈 + 项目亮点
-第11页：总结与展望
-```
-
-### 8.11 各界面截图描述（用于PPT配图）
+### 8.10 各界面截图描述
 
 | 界面 | 关键元素 |
 |------|------|
@@ -767,7 +749,7 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 | **Excel报告** | Sheet1试验信息表、Sheet2温度数据、Sheet3温度曲线图 |
 | **PDF报告** | 试验概要表 + 判定结论（通过/不通过） |
 
-### 8.12 关键技术决策与理由
+### 8.11 关键技术决策与理由
 
 | 决策 | 理由 |
 |------|------|
@@ -792,5 +774,3 @@ Time,Temp1,Temp2,TempSurface,TempCenter,TempCalibration
 | 核心类行数（估算） | ~3000行 |
 
 ---
-
-> **PPT 制作建议**：以上内容可直接复制到 PPT 中。架构图、状态机图、ER图建议用 PPT 的 SmartArt 或形状工具重新绘制为可视化图形，效果更佳。
