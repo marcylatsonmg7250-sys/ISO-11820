@@ -1,0 +1,104 @@
+2026-06-16 16:52:49.729 [INF] ISO 11820 系统启动
+2026-06-16 16:52:49.822 [INF] 配置加载完成
+2026-06-16 16:52:50.271 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 16:52:50.274 [INF] 文件存储目录已确保存在
+2026-06-16 16:54:30.388 [INF] ISO 11820 系统关闭
+2026-06-16 16:54:39.774 [INF] ISO 11820 系统启动
+2026-06-16 16:54:39.820 [INF] 配置加载完成
+2026-06-16 16:54:39.922 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 16:54:39.924 [INF] 文件存储目录已确保存在
+2026-06-16 16:54:55.994 [INF] ISO 11820 系统关闭
+2026-06-16 16:55:21.907 [INF] ISO 11820 系统启动
+2026-06-16 16:55:21.957 [INF] 配置加载完成
+2026-06-16 16:55:22.060 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 16:55:22.061 [INF] 文件存储目录已确保存在
+2026-06-16 16:58:46.485 [ERR] DaqWorker tick error
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ISO11820.Forms.MainForm.OnDataBroadcast(Object sender, DataBroadcastEventArgs e) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 388
+   at ISO11820.Core.TestMaster.DoWork(Dictionary`2 sensorValues) in D:\桌面\项目\ISO11820\Core\TestMaster.cs:line 334
+   at ISO11820.Services.DaqWorker.Tick(Object state) in D:\桌面\项目\ISO11820\Services\DaqWorker.cs:line 57
+2026-06-16 16:58:46.600 [INF] ISO 11820 系统关闭
+2026-06-16 17:00:12.047 [INF] ISO 11820 系统启动
+2026-06-16 17:00:12.103 [INF] 配置加载完成
+2026-06-16 17:00:12.211 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:00:12.212 [INF] 文件存储目录已确保存在
+2026-06-16 17:05:16.359 [INF] ISO 11820 系统关闭
+2026-06-16 17:08:22.916 [INF] ISO 11820 系统启动
+2026-06-16 17:08:22.962 [INF] 配置加载完成
+2026-06-16 17:08:23.055 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:08:23.056 [INF] 文件存储目录已确保存在
+2026-06-16 17:10:27.611 [INF] ISO 11820 系统关闭
+2026-06-16 17:11:59.290 [INF] ISO 11820 系统启动
+2026-06-16 17:11:59.340 [INF] 配置加载完成
+2026-06-16 17:11:59.449 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:11:59.450 [INF] 文件存储目录已确保存在
+2026-06-16 17:14:28.145 [INF] ISO 11820 系统关闭
+2026-06-16 17:19:23.039 [INF] ISO 11820 系统启动
+2026-06-16 17:19:23.087 [INF] 配置加载完成
+2026-06-16 17:19:23.175 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:19:23.176 [INF] 文件存储目录已确保存在
+2026-06-16 17:20:34.574 [ERR] DaqWorker tick error
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ISO11820.Forms.MainForm.OnDataBroadcast(Object sender, DataBroadcastEventArgs e) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 388
+   at ISO11820.Core.TestMaster.DoWork(Dictionary`2 sensorValues) in D:\桌面\项目\ISO11820\Core\TestMaster.cs:line 337
+   at ISO11820.Services.DaqWorker.Tick(Object state) in D:\桌面\项目\ISO11820\Services\DaqWorker.cs:line 57
+2026-06-16 17:20:35.581 [ERR] DaqWorker tick error
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ISO11820.Forms.MainForm.OnDataBroadcast(Object sender, DataBroadcastEventArgs e) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 388
+   at ISO11820.Core.TestMaster.DoWork(Dictionary`2 sensorValues) in D:\桌面\项目\ISO11820\Core\TestMaster.cs:line 337
+   at ISO11820.Services.DaqWorker.Tick(Object state) in D:\桌面\项目\ISO11820\Services\DaqWorker.cs:line 57
+2026-06-16 17:20:35.665 [INF] ISO 11820 系统关闭
+2026-06-16 17:20:42.286 [INF] ISO 11820 系统启动
+2026-06-16 17:20:42.333 [INF] 配置加载完成
+2026-06-16 17:20:42.436 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:20:42.437 [INF] 文件存储目录已确保存在
+2026-06-16 17:32:23.044 [INF] ISO 11820 系统关闭
+2026-06-16 17:35:12.837 [INF] ISO 11820 系统启动
+2026-06-16 17:35:12.896 [INF] 配置加载完成
+2026-06-16 17:35:13.005 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:35:13.007 [INF] 文件存储目录已确保存在
+2026-06-16 17:38:35.423 [INF] ISO 11820 系统关闭
+2026-06-16 17:43:51.217 [INF] ISO 11820 系统启动
+2026-06-16 17:43:51.262 [INF] 配置加载完成
+2026-06-16 17:43:51.361 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:43:51.362 [INF] 文件存储目录已确保存在
+2026-06-16 17:44:01.169 [INF] DaqWorker已启动，采集周期800ms
+2026-06-16 17:44:10.120 [DBG] DaqWorker已停止
+2026-06-16 17:44:10.255 [INF] ISO 11820 系统关闭
+2026-06-16 17:44:53.357 [INF] ISO 11820 系统启动
+2026-06-16 17:44:53.408 [INF] 配置加载完成
+2026-06-16 17:44:53.501 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:44:53.502 [INF] 文件存储目录已确保存在
+2026-06-16 17:45:00.108 [INF] DaqWorker已启动，采集周期800ms
+2026-06-16 17:45:29.523 [DBG] DaqWorker已停止
+2026-06-16 17:45:29.562 [ERR] DaqWorker tick error
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ISO11820.Forms.MainForm.OnDataBroadcast(Object sender, DataBroadcastEventArgs e) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 390
+   at ISO11820.Core.TestMaster.DoWork(Dictionary`2 sensorValues) in D:\桌面\项目\ISO11820\Core\TestMaster.cs:line 345
+   at ISO11820.Services.DaqWorker.Tick(Object state) in D:\桌面\项目\ISO11820\Services\DaqWorker.cs:line 58
+2026-06-16 17:45:30.564 [ERR] DaqWorker tick error
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ISO11820.Forms.MainForm.OnDataBroadcast(Object sender, DataBroadcastEventArgs e) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 390
+   at ISO11820.Core.TestMaster.DoWork(Dictionary`2 sensorValues) in D:\桌面\项目\ISO11820\Core\TestMaster.cs:line 345
+   at ISO11820.Services.DaqWorker.Tick(Object state) in D:\桌面\项目\ISO11820\Services\DaqWorker.cs:line 58
+2026-06-16 17:45:30.653 [INF] ISO 11820 系统关闭
