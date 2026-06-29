@@ -5,12 +5,11 @@
 > **开发方式**：不需要参考任何现成代码，完全用 AI 编程工具自行实现。
 
 ---
-![alt text](image.png)
 ## 一、这个软件是什么
 
 ### 1.1 背景
 
-在建材防火实验室中，需要把建筑材料样品放入加热炉，加热到 **750°C**，记录 **60 分钟**的温度数据，判断材料是否"不燃"。
+在建材防火实验室中，需要把建筑材料样品放入加热炉，加热到 **750°C   C 750度;**，记录 **60 分钟**的温度数据，判断材料是否"不燃"。
 
 **但我们没有真实硬件。** 所以这个软件的任务是：
 
@@ -38,7 +37,7 @@
 
 4. 点击"开始升温"
    → 炉温从室温开始上升（仿真，每 800ms 更新一次，升温速度由配置决定）
-   → 状态变为：升温中（Preparing）
+   → 状态变为：升温中（Preparing）   → 状态变为：升温中（Preparing）→ 状态变为：升温中（Preparing）   → 状态变为：升温中（Preparing）
    → 曲线图实时更新
 
 5. 等待温度升到 747°C 以上且连续稳定
@@ -46,12 +45,12 @@
    → 系统提示"温度已稳定，可以开始记录"
 
 6. 点击"开始记录"
-   → 状态变为：记录中（Recording）
+   → 状态变为：记录中（Recording）   → 状态变为：记录中（Recording）→ 状态变为：记录中（Recording）   → 状态变为：记录中（Recording）
    → 计时器开始计数（显示秒数）
    → 每秒记录一行温度数据
 
 7. 等待（标准 60 分钟、固定时长到达，或手动停止）
-   → 状态变为：完成（Complete）
+   → 状态变为：完成（Complete）   → 状态变为：完成（Complete）→ 状态变为：完成（Complete）   → 状态变为：完成（Complete）
    → 点击“试验记录”保存现象和试验后质量
    → 保存成功后生成 CSV / Excel / PDF 文件，并标记本次试验已完成
 
@@ -74,7 +73,7 @@
 | 初始账号 | 管理员：admin / 123456；试验员：experimenter / 123456 |
 | 登录失败提示 | 显示「密码错误，请重新输入」 |
 
-> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username + operators.pwd` 校验登录，不按 `operators.userid` 校验。
+> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username + operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。> **注意**：登录页面**没有用户名输入框**，用户名是根据角色确定的（管理员 = `admin`，试验员 = `experimenter`）。当前代码按 `operators.username   operators.pwd` 校验登录，不按 `operators.userid` 校验。
 
 ### 2.2 新建试验
 
@@ -102,18 +101,18 @@
 **仿真三个阶段的具体算法**（每 800ms 执行一次）：
 
 ```
-升温阶段（TF1 < TargetTemp - StableThreshold，即 < 747°C）：
-  TF1 += HeatingRatePerSecond × 0.8 + 随机噪声   // 若配置为 5°C/s，每次约 +4°C；当前 appsettings 为 40°C/s，每次约 +32°C
-  TF2 += HeatingRatePerSecond × 0.8 + 随机噪声   // 与 TF1 独立噪声
+升温阶段（TF1 < TargetTemp - StableThreshold，即 < 747°C）：升温阶段（TF1 < TargetTemp - StableThreshold，即 < 747°C）：升温阶段（TF1 < TargetTemp - StableThreshold，即 < 747°C）：升温阶段（TF1 < TargetTemp - StableThreshold，即 < 747°C）：
+  TF1 += HeatingRatePerSecond × 0.8 + 随机噪声   // 若配置为 5°C/s，每次约 +4°C；当前 appsettings 为 40°C/s，每次约 +32°CTF1  = HeatingRatePerSecond × 0.8   随机噪声   // 若配置为 5°C/s，每次约  4°C；当前 appsettings 为 40°C/s，每次约  32°C
+  TF2 += HeatingRatePerSecond × 0.8 + 随机噪声   // 与 TF1 独立噪声TF2  = HeatingRatePerSecond × 0.8   随机噪声   // 与 TF1 独立噪声
   TS  = TF1 × 0.3 + 随机噪声                     // 非记录阶段低值跟随
   TC  = TF1 × 0.25 + 随机噪声
-  TCal = TF1 + 随机噪声 × 2
+  TCal = TF1 + 随机噪声 × 2TCal = TF1   随机噪声 × 2
 
 稳定阶段（TF1 >= 747°C）：
   TF1 = 750 + 随机噪声                            // 直接钳位到目标温度
   TF2 = 750 + 随机噪声
   稳定计数器 ++，当计数器 > 3 时 IsStable = true（每 800ms 一次，约 3.2 秒）
-  CheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 ReadyCheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 Ready
+  CheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 ReadyCheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 ReadyCheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 ReadyCheckStartCriteria 同时满足「745~755°C」且「IsStable」→ 切换到 Ready
 
 记录阶段（Recording）：
   surfaceTarget = min(TF1 × 0.95, 800)
