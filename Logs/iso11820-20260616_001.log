@@ -1,0 +1,87 @@
+2026-06-16 17:45:17.775 [INF] ISO 11820 系统启动
+2026-06-16 17:45:17.826 [INF] 配置加载完成
+2026-06-16 17:45:17.932 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:45:17.933 [INF] 文件存储目录已确保存在
+2026-06-16 17:45:24.100 [INF] ISO 11820 系统关闭
+2026-06-16 17:45:43.040 [INF] ISO 11820 系统启动
+2026-06-16 17:45:43.088 [INF] 配置加载完成
+2026-06-16 17:45:43.187 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:45:43.188 [INF] 文件存储目录已确保存在
+2026-06-16 17:45:47.392 [INF] DaqWorker已启动，采集周期800ms
+2026-06-16 17:46:51.015 [DBG] DaqWorker已停止
+2026-06-16 17:46:51.100 [ERR] DaqWorker tick error
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ISO11820.Forms.MainForm.OnDataBroadcast(Object sender, DataBroadcastEventArgs e) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 390
+   at ISO11820.Core.TestMaster.DoWork(Dictionary`2 sensorValues) in D:\桌面\项目\ISO11820\Core\TestMaster.cs:line 345
+   at ISO11820.Services.DaqWorker.Tick(Object state) in D:\桌面\项目\ISO11820\Services\DaqWorker.cs:line 58
+2026-06-16 17:46:52.116 [ERR] DaqWorker tick error
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MainForm'.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ISO11820.Forms.MainForm.OnDataBroadcast(Object sender, DataBroadcastEventArgs e) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 390
+   at ISO11820.Core.TestMaster.DoWork(Dictionary`2 sensorValues) in D:\桌面\项目\ISO11820\Core\TestMaster.cs:line 345
+   at ISO11820.Services.DaqWorker.Tick(Object state) in D:\桌面\项目\ISO11820\Services\DaqWorker.cs:line 58
+2026-06-16 17:46:52.202 [INF] ISO 11820 系统关闭
+2026-06-16 17:46:57.763 [INF] ISO 11820 系统启动
+2026-06-16 17:46:57.809 [INF] 配置加载完成
+2026-06-16 17:46:57.921 [INF] 数据库初始化完成，路径：D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\ISO11820.db
+2026-06-16 17:46:57.922 [INF] 文件存储目录已确保存在
+2026-06-16 17:47:01.508 [INF] DaqWorker已启动，采集周期800ms
+2026-06-16 17:47:19.318 [INF] 开始记录: ProductId=SP-20260616-001, TestId=20260616-174702, CSV=D:\桌面\项目\ISO11820\bin\Debug\net8.0-windows\Data\TestData\SP-20260616-001\20260616-174702\sensor_data.csv
+2026-06-16 17:47:19.914 [DBG] 记录中: 1条数据, 0秒, TF1=749.5°C
+2026-06-16 17:47:29.512 [DBG] 记录中: 11条数据, 10秒, TF1=749.9°C
+2026-06-16 17:47:39.920 [DBG] 记录中: 21条数据, 20秒, TF1=750.1°C
+2026-06-16 17:47:49.518 [DBG] 记录中: 31条数据, 30秒, TF1=749.5°C
+2026-06-16 17:47:59.919 [DBG] 记录中: 41条数据, 40秒, TF1=749.6°C
+2026-06-16 17:48:09.514 [DBG] 记录中: 51条数据, 50秒, TF1=750.0°C
+2026-06-16 17:48:19.915 [DBG] 记录中: 61条数据, 60秒, TF1=750.4°C
+2026-06-16 17:48:29.522 [DBG] 记录中: 71条数据, 70秒, TF1=749.9°C
+2026-06-16 17:48:39.928 [DBG] 记录中: 81条数据, 80秒, TF1=750.0°C
+2026-06-16 17:48:49.521 [DBG] 记录中: 91条数据, 90秒, TF1=750.2°C
+2026-06-16 17:48:59.930 [DBG] 记录中: 101条数据, 100秒, TF1=749.8°C
+2026-06-16 17:49:51.161 [ERR] 保存试验记录失败
+System.InvalidOperationException: No appropriate font found for family name "Arial". Implement IFontResolver and assign to "GlobalFontSettings.FontResolver" to use fonts.
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at MigraDoc.Rendering.FontHandler.FontToXFont(Font font)
+   at MigraDoc.Rendering.ParagraphRenderer.get_CurrentFont()
+   at MigraDoc.Rendering.ParagraphRenderer.CalcCurrentVerticalInfo()
+   at MigraDoc.Rendering.ParagraphRenderer.InitFormat(Area area, FormatInfo previousFormatInfo)
+   at MigraDoc.Rendering.ParagraphRenderer.Format(Area area, FormatInfo previousFormatInfo)
+   at MigraDoc.Rendering.TopDownFormatter.FormatOnAreas(XGraphics gfx, Boolean topLevel)
+   at MigraDoc.Rendering.FormattedDocument.Format(XGraphics gfx)
+   at MigraDoc.Rendering.DocumentRenderer.PrepareDocument()
+   at MigraDoc.Rendering.PdfDocumentRenderer.PrepareDocumentRenderer(Boolean prepareCompletely)
+   at MigraDoc.Rendering.PdfDocumentRenderer.PrepareRenderPages()
+   at MigraDoc.Rendering.PdfDocumentRenderer.RenderDocument()
+   at ISO11820.Services.ExportService.ExportPdf(TestMasterRecord record, List`1 tempData) in D:\桌面\项目\ISO11820\Services\ExportService.cs:line 267
+   at ISO11820.Forms.MainForm.SaveTestRecord(TestRecordForm form) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 592
+2026-06-16 17:50:01.350 [ERR] 保存试验记录失败
+System.InvalidOperationException: No appropriate font found for family name "Arial". Implement IFontResolver and assign to "GlobalFontSettings.FontResolver" to use fonts.
+   at PdfSharp.Drawing.XGlyphTypeface.GetOrCreateFrom(String familyName, FontResolvingOptions fontResolvingOptions)
+   at PdfSharp.Drawing.XFont.Initialize()
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style, XPdfFontOptions pdfOptions)
+   at PdfSharp.Drawing.XFont..ctor(String familyName, Double emSize, XFontStyleEx style)
+   at MigraDoc.Rendering.FontHandler.FontToXFont(Font font)
+   at MigraDoc.Rendering.ParagraphRenderer.get_CurrentFont()
+   at MigraDoc.Rendering.ParagraphRenderer.CalcCurrentVerticalInfo()
+   at MigraDoc.Rendering.ParagraphRenderer.InitFormat(Area area, FormatInfo previousFormatInfo)
+   at MigraDoc.Rendering.ParagraphRenderer.Format(Area area, FormatInfo previousFormatInfo)
+   at MigraDoc.Rendering.TopDownFormatter.FormatOnAreas(XGraphics gfx, Boolean topLevel)
+   at MigraDoc.Rendering.FormattedDocument.Format(XGraphics gfx)
+   at MigraDoc.Rendering.DocumentRenderer.PrepareDocument()
+   at MigraDoc.Rendering.PdfDocumentRenderer.PrepareDocumentRenderer(Boolean prepareCompletely)
+   at MigraDoc.Rendering.PdfDocumentRenderer.PrepareRenderPages()
+   at MigraDoc.Rendering.PdfDocumentRenderer.RenderDocument()
+   at ISO11820.Services.ExportService.ExportPdf(TestMasterRecord record, List`1 tempData) in D:\桌面\项目\ISO11820\Services\ExportService.cs:line 267
+   at ISO11820.Forms.MainForm.SaveTestRecord(TestRecordForm form) in D:\桌面\项目\ISO11820\Forms\MainForm.cs:line 592
+2026-06-16 17:50:31.258 [DBG] DaqWorker已停止
+2026-06-16 17:50:31.479 [INF] ISO 11820 系统关闭
